@@ -1,10 +1,41 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.eot');
+  src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   font-size: 10px;
+  $red: #AC0E28;
+  $black: #030813;
+  $white: #F4F1F4;
+  $burgundy: #6A1E27;
+  $light: 300;
+  $regular: 400;
+  $medium: 500;
+  $bold: 700;
+  font-family: 'Lato', sans-serif;
 }
+
 .container{
   max-width: 1440px;
   padding: 0 25px;
   margin:0 auto;
+}
+.button{
+  font-size: 30px;
+  color:#000;
+  padding: 7px 70px;
+  background: radial-gradient(169.09% 169.09% at 50% 50%, #AC0E28 0%, rgba(172, 14, 40, 0) 100%);
+  box-shadow: inset 1px 0 5px 4px rgba(0, 0, 0, 0.25);
+  display:inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  box-shadow: 0 0 17px 5px rgba(172, 14, 40, 0.36), inset 1px 0 5px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1200px){
