@@ -23,7 +23,7 @@ body {
 }
 
 .button {
-  font-size: 30px;
+  font-size: 3rem;
   color: #000;
   padding: 7px 70px;
   background: radial-gradient(169.09% 169.09% at 50% 50%, #AC0E28 0%, rgba(172, 14, 40, 0) 100%);
@@ -88,9 +88,33 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 0 0 0 92px;
-  font-size: 29px;
+  font-size: 2.9rem;
   color: #AC0E28;
   cursor: pointer;
+}
+
+.model {
+  padding: 250px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.model__description h3 {
+  background: radial-gradient(62.32% 106.49% at 49.88% 35.06%, #CC0122 0%, #030202 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 6.2rem;
+  font-weight: 400;
+  padding: 60px 0 0 0;
+  margin: 0;
+}
+.model__description p {
+  color: #F4F1F4;
+  font-weight: 400;
+  font-size: 2.2rem;
+  padding: 35px 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
