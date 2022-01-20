@@ -9,6 +9,7 @@ $red: #AC0E28;
 $black: #030813;
 $white: #F4F1F4;
 $burgundy: #6A1E27;
+$grey: #C4C4C4;
 $light: 300;
 $regular: 400;
 $medium: 500;
@@ -97,6 +98,103 @@ body{
       font-size: 2.2rem;
       padding: 35px 0;
       margin:0;
+    }
+  }
+}
+.about-model,.technologies{
+  padding: 150px 0 0 0;
+  h4{
+    font-size: 4rem;
+    color:$red;
+    margin:0;
+    padding: 0 0 90px 0;
+    font-weight: $medium;
+    text-align: center;
+  }
+  &__block{
+    display: flex;
+    justify-content: flex-start;
+    &__description{
+      align-self: center;
+      padding: 0 0 0 26px;
+      max-width: 340px;
+      p{
+        font-weight: $regular;
+        font-size: 2.2rem;
+        color: $grey;
+      }
+    }
+  }
+}
+.technologies{
+  h4{
+    padding: 0 0 180px 0;
+  }
+  &__information{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &__card{
+      position: absolute;
+      z-index: 1;
+      &__unit{
+        position: relative;
+        p{
+          position: absolute;
+          bottom: 0;
+          font-size: 1.4rem;
+          font-weight: $regular;
+          color:#fff;
+          background: linear-gradient(180deg, rgba(46, 43, 43, 0.2) 0%, rgba(0, 0, 0, 0.74) 60.42%);
+          margin:0;
+          padding: 5px 0;
+        }
+      }
+    }
+    &__card:nth-child(2){
+      top:-100px;
+      left: 150px;
+    }
+    &__card:nth-child(2)::after{
+      position: absolute;
+      content: '';
+      width: 200px;
+      background: $red;
+      height: 1px;
+      right: -170px;
+      bottom: -60px;
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+    &__card:nth-child(3){
+      bottom:-250px;
+      left: 150px;
+    }
+    &__card:nth-child(3)::after{
+      position: absolute;
+      content: '';
+      width: 350px;
+      background: $red;
+      height: 1px;
+      right: -318px;
+      top: -15px;
+      transform: rotate(145deg);
+      z-index: 2;
+    }
+    &__card:nth-child(4){
+      bottom:-250px;
+      right: 90px;
+    }
+    &__card:nth-child(4)::after{
+      position: absolute;
+      content: '';
+      width: 140px;
+      background: $red;
+      height: 1px;
+      left:11px;
+      top:-63px;
+      transform: rotate(65deg);
+      z-index: 2;
     }
   }
 }
