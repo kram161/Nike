@@ -33,6 +33,7 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .button:hover {
@@ -117,10 +118,10 @@ body {
   margin: 0;
 }
 
-.about-model, .technologies, .colors {
+.about-model, .technologies, .colors, .shop {
   padding: 150px 0 0 0;
 }
-.about-model h4, .technologies h4, .colors h4 {
+.about-model h4, .technologies h4, .colors h4, .shop h4 {
   font-size: 4rem;
   color: #AC0E28;
   margin: 0;
@@ -128,7 +129,7 @@ body {
   font-weight: 500;
   text-align: center;
 }
-.about-model__block, .technologies__block, .colors__block {
+.about-model__block, .technologies__block, .colors__block, .shop__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,14 +137,14 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.about-model__block__description, .technologies__block__description, .colors__block__description {
+.about-model__block__description, .technologies__block__description, .colors__block__description, .shop__block__description {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   padding: 0 0 0 26px;
   max-width: 340px;
 }
-.about-model__block__description p, .technologies__block__description p, .colors__block__description p {
+.about-model__block__description p, .technologies__block__description p, .colors__block__description p, .shop__block__description p {
   font-weight: 400;
   font-size: 2.2rem;
   color: #C4C4C4;
@@ -251,6 +252,84 @@ body {
           transform: scale(1.2, 1.2);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.shop__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.shop__form__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.shop__form__image__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+}
+.shop__form__image__list img {
+  padding: 25px 27px 0 0;
+}
+.shop__form__description {
+  padding: 0 0 0 30px;
+  max-width: 387px;
+}
+.shop__form__description h4 {
+  font-weight: 400;
+  font-size: 3.4rem;
+  color: #C4C4C4;
+  margin: 0;
+  padding: 0 0 15px 0;
+  text-align: left;
+}
+.shop__form__description p {
+  font-weight: 400;
+  font-size: 2.2rem;
+  color: #C4C4C4;
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+.shop__form__description a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #C4C4C4;
+  text-decoration: none;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+.shop__form__description a:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #C4C4C4;
+  width: 100%;
+  bottom: 0;
+}
+.shop__form__description h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #C4C4C4;
+  margin: 0;
+  padding: 0 0 7px 0;
+}
+.shop__form__description span {
+  color: #AC0E28;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0 0 20px 0;
 }
 
 @media screen and (max-width: 768px) {
