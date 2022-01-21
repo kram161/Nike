@@ -101,7 +101,7 @@ body{
     }
   }
 }
-.about-model,.technologies{
+.about-model,.technologies,.colors{
   padding: 150px 0 0 0;
   h4{
     font-size: 4rem;
@@ -195,6 +195,23 @@ body{
       top:-63px;
       transform: rotate(65deg);
       z-index: 2;
+    }
+  }
+}
+.colors{
+  margin: 250px 0 0 0;
+  &__image{
+    display: flex;
+    justify-content: center;
+    margin: 60px 0 110px 0;
+    img{
+      width: 23%;
+      height: auto;
+      transition: all 0.5s ease;
+    }
+    img:hover{
+      transform: scale(1.2,1.2);
+      transition: all 0.5s ease;
     }
   }
 }
