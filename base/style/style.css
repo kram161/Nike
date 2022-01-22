@@ -33,7 +33,7 @@ body {
 }
 .preview svg {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -42,7 +42,7 @@ body {
   transition: all 0.5s ease;
 }
 .preview svg:hover {
-  bottom: 35px;
+  bottom: 20px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -79,6 +79,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+}
+.model__description {
+  width: 40%;
 }
 .model__description h3 {
   background: radial-gradient(62.32% 106.49% at 49.88% 35.06%, #CC0122 0%, #030202 100%);
@@ -96,6 +100,16 @@ body {
   font-size: 2.2rem;
   padding: 35px 0;
   margin: 0;
+}
+.model__image {
+  width: 60%;
+  margin: auto 0;
+}
+.model__image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-model, .technologies, .colors, .shop {
@@ -116,6 +130,15 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.about-model__block__image, .technologies__block__image, .colors__block__image, .shop__block__image {
+  width: 60%;
+}
+.about-model__block__image img, .technologies__block__image img, .colors__block__image img, .shop__block__image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about-model__block__description, .technologies__block__description, .colors__block__description, .shop__block__description {
   -ms-flex-item-align: center;
@@ -523,6 +546,55 @@ footer {
   width: 0;
 }
 
+@media screen and (max-width: 1440px) {
+  .technologies__information__card:nth-child(2) {
+    top: -150px;
+    left: 0;
+  }
+  .technologies__information__card:nth-child(3) {
+    bottom: -250px;
+    left: 0;
+  }
+  .technologies__information__card:nth-child(4) {
+    bottom: -250px;
+    right: 0;
+  }
+
+  .dropdown-menu__list {
+    top: 75px;
+  }
+  .dropdown-menu .dropdown-menu__list-active {
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 1200px) {
+  :root {
+    font-size: 8px;
+  }
+
+  .shop__form__description__dropdowns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (max-width: 992px) {
+  .technologies__information__card:nth-child(3):after {
+    width: 250px;
+    right: -205px;
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
+  }
+  .technologies__information__card:nth-child(4):after {
+    width: 110px;
+    top: -50px;
+    left: 160px;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 18px;

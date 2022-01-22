@@ -41,14 +41,14 @@ body{
   position: relative;
   svg{
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     left:50%;
     transform: translateX(-50%);
     cursor: pointer;
     transition: all 0.5s ease;
   }
   svg:hover{
-    bottom: 35px;
+    bottom: 20px;
     transition: all 0.5s ease;
   }
 }
@@ -72,7 +72,9 @@ body{
 .model{
   padding: 250px 0 0 0;
   display: flex;
+  width: 100%;
   &__description{
+    width: 40%;
     h3{
       background: radial-gradient(62.32% 106.49% at 49.88% 35.06%, #CC0122 0%, #030202 100%);
       -webkit-background-clip: text;
@@ -91,6 +93,15 @@ body{
       margin:0;
     }
   }
+  &__image{
+    width: 60%;
+    margin:auto 0;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 }
 .about-model,.technologies,.colors,.shop{
   padding: 150px 0 0 0;
@@ -105,6 +116,14 @@ body{
   &__block{
     display: flex;
     justify-content: flex-start;
+    &__image{
+      width: 60%;
+      img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
     &__description{
       align-self: center;
       padding: 0 0 0 26px;
@@ -147,16 +166,16 @@ body{
       left: 150px;
     }
     &__card:nth-child(2)::after{
-      position: absolute;
-      content: '';
-      width: 200px;
-      background: $red;
-      height: 1px;
-      right: -170px;
-      bottom: -60px;
-      transform: rotate(45deg);
-      z-index: 2;
-    }
+       position: absolute;
+       content: '';
+       width: 200px;
+       background: $red;
+       height: 1px;
+       right: -170px;
+       bottom: -60px;
+       transform: rotate(45deg);
+       z-index: 2;
+     }
     &__card:nth-child(3){
       bottom:-250px;
       left: 150px;
@@ -187,6 +206,7 @@ body{
       transform: rotate(65deg);
       z-index: 2;
     }
+
   }
 }
 .colors{
@@ -431,12 +451,63 @@ footer{
     width: 0;
   }
 }
-
+@media screen and (max-width: 1440px){
+  .technologies{
+    &__information{
+      &__card:nth-child(2){
+        top:-150px;
+        left: 0;
+      }
+      &__card:nth-child(3){
+        bottom:-250px;
+        left: 0;
+      }
+      &__card:nth-child(4){
+        bottom:-250px;
+        right: 0;
+      }
+    }
+  }
+  .dropdown-menu{
+    &__list{
+      top:75px;
+    }
+    .dropdown-menu__list-active{
+      z-index: 2;
+    }
+  }
+}
 @media screen and (max-width: 1200px){
+  :root{
+    font-size: 8px;
+  }
+  .shop{
+    &__form{
+      &__description{
+        &__dropdowns{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
 
 }
 @media screen and (max-width: 992px){
-
+  .technologies{
+    &__information{
+      &__card:nth-child(3):after{
+        width: 250px;
+        right:-205px;
+        transform: rotate(130deg);
+      }
+      &__card:nth-child(4):after{
+        width: 110px;
+        top:-50px;
+        left:160px;
+      }
+    }
+  }
 }
 @media screen and (max-width: 768px){
   .container{
