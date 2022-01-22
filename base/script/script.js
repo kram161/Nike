@@ -12,3 +12,9 @@ for (let i = 0; i < dropdown.length; i++){
         dropdownList[i].classList.toggle('dropdown-menu__list-active')
     })
 }
+
+const scroller = document.getElementById('preview-scroller');
+const header = document.getElementById('header');
+scroller.addEventListener('click',() =>{
+    header.scrollIntoView({behavior:"smooth"});
+})

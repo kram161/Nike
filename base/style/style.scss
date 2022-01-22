@@ -29,22 +29,26 @@ body{
 }
 
 .preview{
-  background: url("../img/preview.png") no-repeat;
-  background-size:cover;
+  background: url(../img/preview.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0;
   width: 100%;
-  min-height: 1080px;
+  min-height: 100vh;
   padding: 0;
   position: relative;
   svg{
     position: absolute;
-    bottom: 93px;
+    bottom: 60px;
     left:50%;
     transform: translateX(-50%);
     cursor: pointer;
     transition: all 0.5s ease;
   }
   svg:hover{
-    bottom: 73px;
+    bottom: 35px;
     transition: all 0.5s ease;
   }
 }
@@ -194,7 +198,7 @@ body{
     img{
       width: 23%;
       height: auto;
-      transition: all 0.5s ease;
+      transition: all 0.2s ease;
     }
     img:hover{
       transform: scale(1.2,1.2);
@@ -210,16 +214,23 @@ body{
       display: flex;
       flex-direction: column;
       &__preview{
-
+        img{
+          width: 100%;
+          height: auto;
+        }
       }
       &__list{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-wrap: wrap;
         overflow: hidden;
         img{
-          padding: 25px 27px 0 0;
+          padding: 27px 0 0 0;
+          width: calc(25% - 27px);
+          object-fit: cover;
+          cursor: pointer;
         }
+        img{}
       }
     }
     &__description{
