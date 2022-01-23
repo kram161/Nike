@@ -21,4 +21,12 @@ scroller.addEventListener('click',() =>{
 
 
 
-
+const burgerActivator = document.querySelector('.header-mobile__burger')
+const headerMenuList = document.querySelector('.header-mobile__list')
+const burgerDeactivator = document.querySelector('.header-mobile__list__button')
+burgerActivator.addEventListener('click', () =>{
+    headerMenuList.classList.add('header-mobile__list-active')
+})
+burgerDeactivator.addEventListener('click', () =>{
+    headerMenuList.classList.remove('header-mobile__list-active')
+})
